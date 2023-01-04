@@ -65,7 +65,6 @@ namespace DatingAppAPI.Controllers
             };
         }
 
-
         private async Task<bool> UserExists(string username)
         {
             return await _context.Users.AnyAsync(x => x.UserName.ToLower() == username.ToLower());

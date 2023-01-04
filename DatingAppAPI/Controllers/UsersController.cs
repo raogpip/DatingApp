@@ -14,7 +14,6 @@ namespace DatingAppAPI.Controllers
             _context = context;
         }
 
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
@@ -29,6 +28,5 @@ namespace DatingAppAPI.Controllers
             var user = await _context.Users.FindAsync(id);
             return user != null ? user : NotFound();
         }
-
     }
 }
