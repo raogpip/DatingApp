@@ -67,7 +67,7 @@ namespace DatingAppAPI.Controllers
 
         private async Task<bool> UserExists(string username)
         {
-            return await _context.Users.AnyAsync(x => x.UserName.ToLower() == username.ToLower());
+            return await _context.Users.AnyAsync(x => string.Equals(x.UserName, username, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
