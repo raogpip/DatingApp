@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
       complete: () => console.log('Request has completed'),
     });
   }
+
   registerToggle() {
     this.registerMode = !this.registerMode;
   }
